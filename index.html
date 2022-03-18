@@ -7,6 +7,8 @@
     <style>
         body {
             background: #F6F4E7;
+            margin:0;
+
         }
 
         header {
@@ -28,11 +30,11 @@
 position:relative;
     height:850px;
     position: center;
-margin: 0 100px 0 100px;
+margin: 0 120px 0 120px;
 }
 .insite{
     position:relative;
-margin: 0 auto;
+
     max-height:850px;
 }
 .onTop{
@@ -42,12 +44,12 @@ margin: 0 auto;
     max-height:850px;
     z-index: 3;
 }
-.partA{
-height:100px;
-padding:20px;
-/* background: orange; */
+.games{
+    height: 450px;
+text-align: center;
 }
-        .article {
+
+.article {
             height: auto;
             border-radius: 10px;
             margin: 0 50px 0 50px;
@@ -65,9 +67,16 @@ padding:20px;
         p {
             font-family: 'Noto Serif SC', serif;
         }
+        footer{
+width: 100%;
+            margin:0 auto;
+            height:40px;
+            background: orange;
+text-align: center;
+        }
 /*--------------------------*/
 .reveal{
-transform: translateY(150px);
+transform: translateY(100px);
 opacity: 0;
 transition: 2s all ease;
 }
@@ -111,11 +120,21 @@ transition: 2s all ease;
         <p>我是一名编码员，同时会<i>一点儿</i>绘画——您在本网站看到的美术皆由本人创作。</p>
         <p>如果您对我之前的游戏作品有兴趣，可以在下方看到简介。</p>
         <!-- <p>我于2020年开始创作游戏，在摸索中学会了RPGmaker、Unity的使用方法。</p> -->
-<div class="partA"></div>
-<div class="partA"></div>
-<div class="partA"></div>
-<div class="partA"></div>
+
         </div>
+    <div class="games reveal">
+        <br><br>
+<img src="https://user-images.githubusercontent.com/28853235/158932331-3225a7bc-3fdb-4ce1-9050-d230465a440b.png">  
+<img src="https://user-images.githubusercontent.com/28853235/158932327-1cb0bb45-d5de-44ee-9465-caea91fc45a6.png">  
+<img src="https://user-images.githubusercontent.com/28853235/158932330-c3f8d0b5-dc20-4441-a2a2-2ec808f3b374.png">
+
+</div>
+<div class="article">
+<p>敬请期待更多内容！</p><br>
+</div>
+<footer>
+<p>CopyRight@TheBluesChronicles & m10</p>
+</footer>
 </body>
 
 
@@ -126,7 +145,7 @@ function reveal() {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+    var elementVisible = 100;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
     } else {
