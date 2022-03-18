@@ -24,15 +24,37 @@
             display: inline;
             padding: 0 40px 0 40px;
         }
-
-        .container {
-            height: 800px;
+.pic{
+position:relative;
+    height:850px;
+    position: center;
+margin: 0 100px 0 100px;
+}
+.insite{
+    position:relative;
+margin: 0 auto;
+    max-height:850px;
+}
+.onTop{
+    top:0;
+    left:0;
+    position:absolute;
+    max-height:850px;
+    z-index: 3;
+}
+.partA{
+height:100px;
+padding:20px;
+/* background: orange; */
+}
+        .article {
+            height: auto;
             border-radius: 10px;
             margin: 0 50px 0 50px;
             text-align: center;
         }
 
-        img {
+        #icon {
             height: 100px;
         }
 
@@ -43,25 +65,78 @@
         p {
             font-family: 'Noto Serif SC', serif;
         }
+/*--------------------------*/
+.reveal{
+transform: translateY(150px);
+opacity: 0;
+transition: 2s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
     </style>
 </head>
 <body>
     <header><div class="top">yes</div>
             <ul>
-                <li><img src="https://i.imgur.com/7wlijwn.png" /></li>
-                <li><img src="https://i.imgur.com/kDb3EaE.png" /></li>
-                <li><img src="https://i.imgur.com/kd9nnmn.png" /></li>
-                <li><img src="https://i.imgur.com/Mw6RZcF.png" /></li>
+                <li><img id="icon" src="https://i.imgur.com/7wlijwn.png" /></li>
+                <li><img id="icon" src="https://i.imgur.com/kDb3EaE.png" /></li>
+                <li><img id="icon" src="https://i.imgur.com/kd9nnmn.png" /></li>
+                <li><img id="icon" src="https://i.imgur.com/Mw6RZcF.png" /></li>
             </ul>
     </header>
-    <div class="container">
+    <div class="article">
         <hr />
-        <h1><b>初次之会面！</b></h1>
+        <p>2022/03/16</p>
+        <p>在本页面您可以看到：</p>
+        <p>办公室图 | 作品浏览 | 自我介绍</p>
+        <br><br>
+        <br><br>
+        <h1><b>初次之会面！</b></h1><br>
         <p>大家好，我是m10，<i>布鲁斯年历</i>的创始人。</p>
         <p>此网站正在进行维修，我们将为您带来最好的观赏体验。</p>
-        <p>敬请期待！</p>
-
+        <p>在那之前，您可以尽情浏览我们的办公室。</p>
     </div>
+    <div class="pic">
+        <img class="insite" src="https://user-images.githubusercontent.com/28853235/158911700-426ae6b2-2ee3-4478-8579-e599ff29d403.png">
+        <img class="onTop reveal" src="https://user-images.githubusercontent.com/28853235/158922467-f8596151-2bc2-4355-9e46-c5c6fb8247e1.png">
+    </div>
+    <div class="article">
+        <hr />
+        <p>2022/03/17</p>
+        <br><br>
+        <h1><b>或许、一点介绍</b></h1><br>
+        <p>我是一名编码员，同时会<i>一点儿</i>绘画——您在本网站看到的美术皆由本人创作。</p>
+        <p>如果您对我之前的游戏作品有兴趣，可以在下方看到简介。</p>
+        <!-- <p>我于2020年开始创作游戏，在摸索中学会了RPGmaker、Unity的使用方法。</p> -->
+<div class="partA"></div>
+<div class="partA"></div>
+<div class="partA"></div>
+<div class="partA"></div>
+        </div>
 </body>
 
+
+
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+
+reveal();
+
+</script>
 </html>
