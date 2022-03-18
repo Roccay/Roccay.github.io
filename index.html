@@ -16,7 +16,7 @@
         }
 
         .top {
-            margin: -50px -8px 0 -8px;
+            margin: -50px 0 0 0;
             height: 700px;
             background-size: cover;
             background-image: url("https://user-images.githubusercontent.com/28853235/158935861-fb8f2462-c88c-4d16-8841-2baa9996c33f.png");
@@ -82,6 +82,38 @@ transition: 2s all ease;
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
+}
+
+@media(max-width:1400px){
+    .insite{
+    position:relative;
+
+    max-height:500px;
+}
+.onTop{
+    right:0;
+    left:0;
+    margin: auto;
+    position:absolute;
+    max-height:500px;
+
+}
+@media(max-width:800px){
+    .top {
+            margin: -50px 0 0 0;
+            height: 400px;}
+    .insite{
+    position:relative;
+
+    max-height:300px;
+}
+.onTop{
+    right:0;
+    left:0;
+    margin: auto;
+    position:absolute;
+    max-height:300px;
+
 }
 
     </style>
