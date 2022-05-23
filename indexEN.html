@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="mainPageStyleEN.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><div class="top">
+      <p id = "langOptions"><br><br>
+        EN/<a href="index.html">ZH</a>
+    
+    </p>
+
+
+    </div>
+
+            <ul>
+                <li><img id="icon" src="https://user-images.githubusercontent.com/28853235/158935682-d89f10c7-86a5-4975-98fa-71071bff82b7.png" /></li>
+                <li><img id="icon" src="https://user-images.githubusercontent.com/28853235/158935678-2b37380a-f93c-4e6e-80d2-2d48eaca2305.png" /></li>
+                <li><img id="icon" src="https://user-images.githubusercontent.com/28853235/158935676-202b21bb-6f57-4151-8a78-a872951c474c.png" /></li>
+                <li><img id="icon" src="https://user-images.githubusercontent.com/28853235/158935680-0cfa8a33-5389-4733-baba-36f851200d77.png" /></li>
+            </ul>
+
+    </header>
+    <div class="article">
+        <hr />
+        <p>2022/03/16</p>
+        <p>This Page Contains</p>
+        <p>Office Overview | Portfolio | Intruduction</p>
+        <br><br>
+        <br><br>
+        <h1><b>!Nice To Meet You!</b></h1><br>
+        <p>Hello, my name is 「<b>m10</b>」, you can also call me 「<b>Roccay</b>」.</p>
+          <p>I am the founder (founder, I guess?) of <i>The Blues Chronicles</i>.</p>
+        <p>This site is still in construction.</p>
+        <p>Before everything starts, you can take a look of my office.</p>
+        <div class="pic">
+            <img class="insite" src="https://user-images.githubusercontent.com/28853235/158911700-426ae6b2-2ee3-4478-8579-e599ff29d403.png">
+            <img class="onTop reveal" src="https://user-images.githubusercontent.com/28853235/158922467-f8596151-2bc2-4355-9e46-c5c6fb8247e1.png">
+        </div>
+    
+    </div>
+
+    <div class="article">
+        <hr />
+        <p>2022/03/17</p>
+        <br><br>
+        <h1><b>Perhaps、Some Intruduction</b></h1><br>
+        <p>I am a beginner in programming，and know <i>a little bit of</i> art——all the artworks you see in this website are created by me.</p>
+        <p>If you are interested in my projects, please see below for details.</p>
+        <!-- <p>我于2020年开始创作游戏，在摸索中学会了RPGmaker、Unity的使用方法。</p> -->
+
+        </div>
+    <div class="games reveal">
+        <br><br>
+<img src="https://user-images.githubusercontent.com/28853235/158932331-3225a7bc-3fdb-4ce1-9050-d230465a440b.png">  
+<img src="https://user-images.githubusercontent.com/28853235/158932327-1cb0bb45-d5de-44ee-9465-caea91fc45a6.png">  
+<img src="https://user-images.githubusercontent.com/28853235/158932330-c3f8d0b5-dc20-4441-a2a2-2ec808f3b374.png">
+
+</div>
+<div class="article">
+<p><b>!More Contents Coming Up!</b></p><br>
+</div>
+<footer>
+<p>CopyRight@TheBluesChronicles & m10</p>
+</footer>
+</body>
+
+
+
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+
+reveal();
+
+</script>
+</html>
