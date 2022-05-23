@@ -1,5 +1,27 @@
-
-        body {
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ECC12E;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #886E54;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #634D44;
+  }
+       
+       
+       
+       
+       body {
             background: #F6F4E7;
             margin:0;
 
@@ -15,8 +37,8 @@
             margin: -50px 0 0 0;
         }
         .top {
-            margin: -50px 0 0 0;
-            height: 700px;
+            margin: -50px 0  0;
+            height: 900px;
             
             background-size: cover;
             background-image: url("https://user-images.githubusercontent.com/28853235/158935861-fb8f2462-c88c-4d16-8841-2baa9996c33f.png");
